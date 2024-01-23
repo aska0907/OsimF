@@ -77,3 +77,4 @@ var createPay = (payment) => {
         });
     });
 };
+module.exports = app;
