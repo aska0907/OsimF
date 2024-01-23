@@ -7,11 +7,9 @@
       }
     ],
     "routes": [
-      { "src": "/api/(.*)", "dest": "/server.js" },
-      { "handle": "filesystem" }
-    ],
-    "env": {
-      "NODE_ENV": "production"
-    }
+      {
+        "src": "/(.*)",
+        "dest": "server.js"
+      }
+    ]
   }
-  
