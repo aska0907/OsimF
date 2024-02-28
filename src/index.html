@@ -20,6 +20,14 @@
             font-size: 15px;
             font-weight: bold;
         }
+        .dona{
+           background-color: blue;
+            width: 10em;
+        }
+       .morer{
+            background-color: orange;
+             
+        }
 
         .card {
             margin-bottom: 20px;
@@ -28,27 +36,48 @@
         @media (max-width: 768px) {
             .card {
                 text-align: center;
-            }
+            }                                                                                                                                                                                                                                                                                                           
         }
         .donate{
-            background-color: rgb(228, 200, 200);
+            background-color: rgb(248, 211, 166);
             padding-top: 1em;
         }
+        .osimname{
+            color: white;
+        }
+        .slogan{
+            color: whitesmoke;
+        }
+       
+        .decorative-line {
+    width: 20%;
+    height: 10px; /* Adjust height as needed */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1em;
+    border-radius: .2em;
+    background-color:orange;
+    
+  }
+  .uplift{
+    color: black;
+  }
+  .hist{
+    font-size: large;
+    text-align: center;
+  }
+ 
+       
     </style>
 </head>
 <body>
     <!--navbar-->
     <div class="imageBackground">
-        <div class="information text-white">
-            <div class="container">
-                <h1 class="display-4"> OSIM FOUNDATION</h1>
-               
-            </div>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-            <div class="container">
+      
+        <nav  class="navbar navbar-expand-lg navbar-dark bg-transparent ">
+            <div class="container-fluid navs">
                 <!--logo-->
-                <img src="images/logo1.png" alt="OSIM" class="img-fluid">
+                <h3 class="osimname fw-bolder"> OSIM FOUNDATION</h3>
         
                 <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -93,19 +122,39 @@
                 </div>
             </div>
         </nav>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col col-md-8">
+        <div class="container  p-5 text-center">
+            <h1 class="display-4 slogan fw-semibold ">Legacy of Excellence Better Health - Better Society</h1>
         
-        
-    
+          </div>
+          
+            </div>
+            <div class="col col-md-4">
+                <div class="container  p-5 text-center">
+                <a class="btn btn-primary btn-lg dona" href="" role="button">DONATE</a>
+                </div>
+            </div>
     </div>
   
-    
-   <div class="myBody">
-    <div class="container  p-5 text-center">
-        <h1 class="display-3">Legacy of Excellence Better Health - Better Society</h1>
-       
-       
+    </div>
+    <div class="container  p-4 text-center">
+        <h1 class="display-5  uplift">Through our dedicated effort we strive to uplift vulnerable populations</h1>
       </div>
-      
+      <div class="container decorative-line mx-auto"></div>
+   
+    <div class="container  text-center ">
+        <p class="justify-content-center   hist"> Osim Foundation is a non profit organization  dedicated to
+             enhance maternal and child health, 
+            supporting sanitary pad initiatives, nutritional programs, 
+            and empowering women in remote communities of  Tanzania.</p>
+            <p class="justify-content-center  hist">The organization focuses on health education,
+                 promoting health-seeking behavior, and addressing various dimensions of
+                  poverty through socio-economic empowerment programs in marginalized areas</p>
+                  <p class="justify-content-center  hist">Help us donate to marernal and school girls to improve their living situations</p>
+                  <a class="btn  morer" href="" role="button">READ MORE</a>
+                </div>
+                <div class="myBody">
     <div class="container">
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
@@ -115,10 +164,10 @@
                     </div>
                     <div class="card-body text-center">
                         <h5 class="card-title">PROFILE</h5>
-                        <p class="card-text">OSIM FOUNDATION  was formed in 2018 aiming at improving maternal and child health, sanitary pad project, implementing nutritional program, women empowerment in  far unreached communities of Arusha region in Tanzania through health education and promoting health seeking behavior for communities living in marginalized areas.  </p>
+                        <p class="card-text">OSIM FOUNDATION  was formed in 2018 aiming at improving maternal and child health, sanitary pad project, implementing nutritional program, women empowerment in  far unreached communities of Arusha region in Tanzania....  </p>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button class="btn btn-primary btn-lg" type="button" style="font-size: 16px; padding: 10px 20px; border-radius: 25px;" onclick="window.location.href='history.html'">READ MORE</button>
+                        button class="btn btn-primary btn-lg" type="button" style="font-size: 16px; padding: 10px 20px; border-radius: 25px;" onclick="window.location.href='history.html'">READ MORE</button>
                     </div>
                 </div>
             </div>

@@ -64,8 +64,10 @@ header, p {
    
 }
 .imageBackground {
-   background-color: rgb(148, 148, 240);
+ 
+    background-image: url(images/backgr.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .navbar{
@@ -84,7 +86,7 @@ header, p {
 
 .information {
     font-size: 1.5rem;
-   padding-top: 3em;
+   
    
 }
 
@@ -181,4 +183,11 @@ header, p {
         width: 20em;
         height: 12em;
     }
-    
+    .navs{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background-color:rgb(0, 0, 0, 0.5);
+      }

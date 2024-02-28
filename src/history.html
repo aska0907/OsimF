@@ -68,16 +68,16 @@
 
 </head>
 <body>
-    <div class="imageBackground">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-            <div class="container">
+    
+        <nav  class="navbar navbar-expand-lg navbar-dark bg-transparent ">
+            <div class="container-fluid navs">
                 <!--logo-->
-               
-                <img src="images/logo1.png" alt="OSIM" class="img-fluid">
+                <h3 class="osimname fw-bolder"> OSIM FOUNDATION</h3>
+        
                 <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-    
+        
                 <div class="sidebar offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">OSIM FOUNDATION</h5>
@@ -92,10 +92,11 @@
                             <li class="nav-item mx-2">
                                 <a class="nav-link" href="history.html">Our History</a>
                             </li>
-                            <li class="nav-item mx-2">
-                                <a class="nav-link scroll-to-contact" href=".downUs">Contact</a>
-                                </li>
-     
+                            <!-- Modify your "Contact" link -->
+                           <li class="nav-item mx-2">
+                           <a class="nav-link scroll-to-contact" href=".downUs">Contact</a>
+                           </li>
+
                             <li class="nav-item mx-2 dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" id="aboutUsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                     About Us
@@ -103,18 +104,22 @@
                                 <ul class="dropdown-menu" aria-labelledby="aboutUsDropdown">
                                     <li><a class="dropdown-item" href="ourTeam.html">Our Team</a></li>
                                     <li><a class="dropdown-item" href="project.html">Our Work</a></li>
-                                   
+                                </ul>
                             </li>
                         </ul>
-                        <!--login/signup-->
                        
+        
+                        <!-- Add an element for displaying the user's email with Bootstrap icon (this will initially be hidden) -->
+                        <p id="userEmail" style="display: none; color: white; font-size: 18px;">
+                            <i class="bi bi-person-circle"></i> <span id="userEmailText"></span>
+                        </p>
                     </div>
                 </div>
             </div>
         </nav>
         
        
-    </div>
+  
   <div class="container container-title text-center">
     <h1 class="display-3 font-weight-bold text-primary">Explore Our Rich History</h1>
 </div>
