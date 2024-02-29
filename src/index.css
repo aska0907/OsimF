@@ -44,6 +44,9 @@ body{
         color: whitesmoke;
         margin-top: 3ems;
     }
+    .hideOnLarge{
+        display: none;
+    }
     
 }
 .navbar-toggler-icon {
