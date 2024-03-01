@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Cropper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
         import { getAuth } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js";
@@ -68,6 +73,21 @@
     </div>
    
     <script type="module">
+        
+        function insertImageFromLocalStorage() {
+            // Retrieve the cropped image data URL from LocalStorage
+            var croppedImageDataURL = localStorage.getItem('croppedImage');
+
+            if (croppedImageDataURL) {
+                // Set the retrieved image as the source of the image element
+                var imgElement = document.getElementById('insertedImage');
+                imgElement.src = croppedImageDataURL;
+            } else {
+                alert('No image found in LocalStorage.');
+            }
+        }
+    
+        
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
         import { getAuth } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
         import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js";
@@ -94,45 +114,50 @@
         const signupButton = document.getElementById("submitButton");
 
         signupForm.addEventListener("submit", async (e) => {
-            e.preventDefault(); // Prevent the default form submission behavior
+    e.preventDefault(); // Prevent the default form submission behavior
 
-            // Collect form data
-            const heading = document.getElementById("newsTitle").value;
-            const miniTitle = document.getElementById("miniTitle").value;
-            const content = document.getElementById("newsContent").value;
-            const fileInput = document.getElementById("newsImage");
-            const imageFile = fileInput.files[0];
+    // Collect form data
+    const heading = document.getElementById("newsTitle").value;
+    const miniTitle = document.getElementById("miniTitle").value;
+    const content = document.getElementById("newsContent").value;
+    const fileInput = document.getElementById("newsImage");
+    const imageFile = fileInput.files[0];
 
-            try {
-                // Upload image to Firebase Storage
-                const storageRef = ref(storage, `images/${imageFile.name}`);
-                await uploadBytes(storageRef, imageFile);
+    try {
+        // Upload image to Firebase Storage
+        const storageRef = ref(storage, `images/${imageFile.name}`);
+        await uploadBytes(storageRef, imageFile);
 
-                // Get the download URL of the uploaded image
-                const imageUrl = await getDownloadURL(storageRef);
+        // Get the download URL of the uploaded image
+        const imageUrl = await getDownloadURL(storageRef);
 
-                // Save data to Firestore with the image URL
-                await addDoc(collection(db, "news"), {
-                    heading: heading,
-                    miniTitle: miniTitle,
-                    content: content,
-                    imageUrl: imageUrl
-                });
+        // Get the current timestamp
+        const timestamp = new Date().toLocaleString(); // Change this to the format you prefer
 
-                // Data saved successfully
-                alert("Data saved successfully!");
-
-                // Clear form fields
-                signupForm.reset();
-
-                // Optionally, you can redirect the user to a different page
-                // window.location.href = "index.html"; // Replace with your success page URL
-            } catch (error) {
-                // Handle errors
-                console.error("Error saving data:", error.message);
-                alert("Error saving data: " + error.message);
-            }
+        // Save data to Firestore with the image URL and timestamp
+        await addDoc(collection(db, "news"), {
+            heading: heading,
+            miniTitle: miniTitle,
+            content: content,
+            imageUrl: imageUrl,
+            timestamp: timestamp // Add the timestamp field
         });
+
+        // Data saved successfully
+        alert("Data saved successfully!");
+
+        // Clear form fields
+        signupForm.reset();
+
+        // Optionally, you can redirect the user to a different page
+        // window.location.href = "index.html"; // Replace with your success page URL
+    } catch (error) {
+        // Handle errors
+        console.error("Error saving data:", error.message);
+        alert("Error saving data: " + error.message);
+    }
+});
+
         function previewImage() {
         const input = document.getElementById('newsImage');
         const preview = document.getElementById('previewImage');

@@ -14,27 +14,33 @@
         }
 
         .card-img-top {
-            max-width: 100%;
-            max-height: 200px;
-            object-fit: cover;
-        }
-        .headnews{
-           
-            font-size: xx-large;
-            font-weight: bolder;
-            margin-top: 1em;
-            padding-top: 1em;
-           color: black;
-            text-align: center;
-            margin-bottom: 2em;
+             max-width: 100%;
+             max-height: 200px;
+             object-fit: cover;
+             object-position: top; /* This will align the image to the top */
+         }
+
+       .card-stamp{
+        color: grey;
+        font-size: small;
+       }
+       .card-title{
+        font-size: x-large;
+       }
           
-            
-        }
-        .body2{
-            background-color: rgb(247, 237, 223);
-            border-radius: .2em;
-        }
-    
+         .card-author{
+            color: rgb(43, 34, 34);
+            font-weight: bold;
+            font-style: italic;
+
+         }  
+         .card-content{
+            color:black;
+         } 
+      body{
+        background-color: rgb(245, 229, 229);
+      }
+       
     /* Custom loading animation */
     .loading-balls {
         display: inline-block;
@@ -43,7 +49,7 @@
         background-color: #333;
         border-radius: 50%;
         animation: bounce 0.6s infinite alternate;
-        margin-bottom: 10px;
+       
     }
 
     @keyframes bounce {
@@ -56,11 +62,36 @@
     #loading {
         display: none;
     }
-
-
+   
+    .newx{
+        background-color:rgb(0, 0, 0, 0.2);
+        margin-top: 3em;
+    }
+    .newxx{
+        background-color: wheat;
+        padding-bottom: 1em;
+      
+       
+    }
+       .decorative-line {
+    width: 20%;
+    height: 10px; /* Adjust height as needed */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1em;
+    border-radius: .2em;
+    background-color:orange;
+    margin-top: 2em;
+       }
     </style>
 </head>
 
+  
+    
+   
+
+
+<body>
     <nav  class="navbar navbar-expand-lg navbar-dark bg-transparent ">
         <div class="container-fluid navs">
             <!--logo-->
@@ -109,16 +140,13 @@
             </div>
         </div>
     </nav>
-    
-   
-
-
-<body>
-    <div class="container body2">
-        <div class="container">
-            <h1 class="container headnews"> OUR TRIPS AND EVENTS</h1>
+    <div class="container">
+        <div class="newxx">
+        <div class="container newx  p-3 text-center">
+            <h1 class="display-4 fw-semibold ">Stay updated: Discover the latest news and events</h1>
         </div>
-    
+          </div>
+      <div class="container decorative-line mx-auto"></div>
         <div class="container mt-5">
             <!-- Custom loading element -->
             <div id="loading" class="text-center">
@@ -133,52 +161,7 @@
             </div>
         </div>
     </div>
-    <div class="downUs">
-        <div class="container mt-5">
-            <div class="row">
-                <!-- Links Section -->
-                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                    <div class="down">
-                        <h2 class="display-5">Our Home</h2>
-                        <img src="images/longidomap (2).png" alt="map" usemap="#usefulLinksMap" class="mapL">
-                    </div>
-                </div>
-        
-                <!-- Contacts Section -->
-                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                    <div class="down">
-                        <h2 class="display-5">Contact</h2>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-phone"></i> Phone:+255769933368</li>
-                            <li><i class="fas fa-phone"></i> Phone:+255766876286</li>
-                            <li><i class="fas fa-envelope"></i> Email: info@OsimFoundation.org</li>
-                        </ul>
-                    </div>
-                </div>
-        
-                <!-- Follow Us Section -->
-                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-                    <div class="down">
-                        <h2 class="display-5">Follow Us</h2>
-                        
-                        <div class="social-icons">
-                            <a class="aboutUs" href="#"><i class="bi bi-facebook"></i> OsimFoundation</a>
-                            <a class="aboutUs" href="#"><i class="bi bi-twitter-x"></i> OsimFoundation</a>
-                            <a class="aboutUs" href="#"><i class="bi bi-instagram"></i> OsimFoundation</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-         <div class="me">
-          <footer class="text-center">
-                <div class="container">
-                    <p>Designed by <strong>AskaTechForge</strong> &bull;
-                    <p>&copy; 2024 Osim Foundation . All rights reserved.</p>
-                </div>
-            </footer>
-        </div>
+   
             
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
@@ -188,16 +171,16 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
         import { getFirestore, collection, getDocs, onSnapshot } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js";
     
-        // Your Firebase configuration
         const firebaseConfig = {
-    apiKey: "AIzaSyAh2op_p29Oe1YNUmoXzOP_xgrqK7LcqRM",
-    authDomain: "osim-foundation.firebaseapp.com",
-    projectId: "osim-foundation",
-    storageBucket: "osim-foundation.appspot.com",
-    messagingSenderId: "401345535402",
-    appId: "1:401345535402:web:bba44429e25b6250e69fd3",
-    measurementId: "G-9BRRBECHJF"
-  };
+            apiKey: "AIzaSyAh2op_p29Oe1YNUmoXzOP_xgrqK7LcqRM",
+            authDomain: "osim-foundation.firebaseapp.com",
+            projectId: "osim-foundation",
+            storageBucket: "osim-foundation.appspot.com",
+            messagingSenderId: "401345535402",
+            appId: "1:401345535402:web:bba44429e25b6250e69fd3",
+            measurementId: "G-9BRRBECHJF"
+        };
+    
     
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
@@ -253,42 +236,62 @@
     
             // Create the card body
             const cardBody = document.createElement("div");
-            cardBody.className = "card-body";
-    
-            // Add the title
-            const title = document.createElement("h5");
-            title.className = "card-title";
-            title.textContent = newsEntry.title;
-            cardBody.appendChild(title);
-    
-            // Create the mini-title
-            const miniTitle = document.createElement("p");
-            miniTitle.className = "card-subtitle mb-2 text-muted";
-            miniTitle.textContent = newsEntry.miniTitle || "Mini Title";
-            cardBody.appendChild(miniTitle);
-    
-            // Create the content
-            const content = document.createElement("p");
-            content.className = "card-text";
-            content.style.display = "none"; // Initially hide content
-            content.textContent = newsEntry.content;
-            cardBody.appendChild(content);
-    
-            // Attach a click event to open the news_detail.html page in the same tab with data
-            newsCard.addEventListener("click", function () {
-                // Encode data to pass it as a URL parameter
-                const data = btoa(JSON.stringify(newsEntry));
-                const url = `news_detail.html?data=${data}`;
-                window.location.href = url;
-            });
-    
-            newsCard.appendChild(cardBody);
-            return newsCard;
-        }
-    
-        // Call the function to fetch and display news entries
-        fetchAndDisplayNews();
-    </script>
+        cardBody.className = "card-body";
+             // Create the timestamp
+        const timestamp = document.createElement("p");
+        timestamp.className = "card-stamp";
+        timestamp.textContent = newsEntry.timestamp;
+        cardBody.appendChild(timestamp);
+
+        // Add the title
+        const title = document.createElement("h5");
+        title.className = "card-title";
+        title.textContent = newsEntry.heading;
+        cardBody.appendChild(title);
+
+        // Create the mini-title
+        const miniTitle = document.createElement("p");
+        miniTitle.className = "card-author";
+        miniTitle.textContent = newsEntry.miniTitle || "Mini Title";
+        cardBody.appendChild(miniTitle);
+
+        // Create the content
+        const content = document.createElement("p");
+        content.className = "card-content";
+        const maxContentLength = 100; // Maximum length of content to display initially
+        content.textContent = newsEntry.content.length > maxContentLength ?
+                               newsEntry.content.substring(0, maxContentLength) + "..." :
+                               newsEntry.content;
+        cardBody.appendChild(content);
+
+        // Create the full content
+        const fullContent = document.createElement("p");
+        fullContent.className = "card-text";
+        fullContent.textContent = newsEntry.content;
+        fullContent.style.display = "none"; // Initially hide full content
+        cardBody.appendChild(fullContent);
+
+       
+        newsCard.appendChild(cardBody);
+
+        // Toggle content display on card click
+        newsCard.addEventListener("click", function() {
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                fullContent.style.display = "none";
+            } else {
+                content.style.display = "none";
+                fullContent.style.display = "block";
+            }
+        });
+
+        return newsCard;
+    }
+
+
+    // Call the function to fetch and display news entries
+    fetchAndDisplayNews();
+</script>
     
     
 </body>
