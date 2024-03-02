@@ -34,7 +34,7 @@
                         <input type="text" class="form-control" id="newsTitle" placeholder="Enter news title">
                     </div>
                     <div class="mb-3">
-                        <label for="miniTitle" class="form-label">Mini Title</label>
+                        <label for="miniTitle" class="form-label">Author</label>
                         <input type="text" class="form-control" id="miniTitle" placeholder="Enter mini title">
                     </div>
                     <div class="mb-3">
@@ -63,7 +63,7 @@
                     <img id="previewImage" class="card-img-top" alt="News Image">
                     <div class="card-body">
                         <h5 id="previewTitle" class="card-title">News Title</h5>
-                        <p id="previewMiniTitle" class="card-text">Mini Title: This is a sample mini title.</p>
+                        <p id="previewMiniTitle" class="card-text">Author: This is a sample of Author.</p>
                         <p id="previewContent" class="card-text">News Content: This is a sample news content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
         const textColor = document.getElementById('textColor').value;
 
         document.getElementById('previewTitle').innerText = title;
-        document.getElementById('previewMiniTitle').innerText = `Mini Title: ${miniTitle}`;
+        document.getElementById('previewMiniTitle').innerText = `Author: ${miniTitle}`;
         document.getElementById('previewContent').innerText = `News Content: ${content}`;
         document.getElementById('previewContent').style.color = textColor;
     }

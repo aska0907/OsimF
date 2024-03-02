@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bootstrap-icons-1.11.1/bootstrap-icons.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .team-member-img {
+            width: 150px; /* Adjust the size as needed */
+            height: 150px; /* Adjust the size as needed */
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .donationH{
+            font-family: 'Times New Roman', Times, serif;
+        
+        }
+       
+        
+        .pleaseC{
+            
+           text-align: center;
+           margin-top: 2em;
+           background-color:rgb(0, 0, 0, 0.1);
+            padding-left: 1em;
+            width: 95%;
+            padding-top: 3em;
+            padding-bottom: 3em;
+            
+        }
+        .dontF{
+            background-color:white;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+        .dontF1{
+            
+            
+            background-color: orange;
+            margin-top: 2em;
+            padding-left: .7em;
+            margin-right: 1em;
+            
+            margin-bottom: 1em;
+           
+          
+  
+        }
+        .banks{
+            background-color: orange;
+            margin-top: 1em;
+            padding-left: .4em;
+            margin-right: 1em;
+            padding-bottom: .4em;
+            margin-bottom: 3em;
+            border-radius: 1em;
+            padding-top: .4em;
+            padding-right: .4em;
+        }
+        .banks2{
+            background-color:white;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            border-radius: 1em;
+           
+        }
+        .hd{
+            margin-left: 1em;
+        }
+        .dona{
+            color: blue;
+            font-size: x-large;
+            font-family: cursive;
+            background-color: orange;
+           
+        }
+        .credit-card-icon {
+  width: 52px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 5px; /* Add some spacing between the icons */
+}
+
+
+    </style>
+</head>
+<body>
+    
+        <nav  class="navbar navbar-expand-lg navbar-dark bg-transparent ">
+            <div class="container-fluid navs">
+                <!--logo-->
+                <h3 class="osimname fw-bolder"> OSIM FOUNDATION</h3>
+        
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="sidebar offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">OSIM FOUNDATION</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <!--sidebar-->
+                    <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-1">
+                        <ul class="navbar-nav justify-content-center align-items-center fs-6 flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active mx-2" aria-current="page" href="index.html" style="color: white;">Home</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="history.html">Our History</a>
+                            </li>
+                            <!-- Modify your "Contact" link -->
+                           <li class="nav-item mx-2">
+                           <a class="nav-link scroll-to-contact" href=".downUs">Contact</a>
+                           </li>
+
+                            <li class="nav-item mx-2 dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" id="aboutUsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    About Us
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="aboutUsDropdown">
+                                    <li><a class="dropdown-item" href="ourTeam.html">Our Team</a></li>
+                                    <li><a class="dropdown-item" href="project.html">Our Work</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                       
+        
+                        <!-- Add an element for displaying the user's email with Bootstrap icon (this will initially be hidden) -->
+                        <p id="userEmail" style="display: none; color: white; font-size: 18px;">
+                            <i class="bi bi-person-circle"></i> <span id="userEmailText"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="pleaseC1">
+       <div class="container pleaseC">
+         <p class="fw-bold display-6 donationH">Please contribute now for the project that are being carried out in Osim Foundation</p>
+       </div>
+    </div>
+      <div class=" dontF1 ">
+       <div class=" dontF">
+        <h6 class="text-center ">Use the following bank details to donate <br>Dont forget to write "friends of Osim F oundation"</h6>
+       </div>
+    </div>
+       <div class="banks">
+        <div class="banks2">
+           <h5 class="hd"> Bank Name :<b><br> Nation Microfinance Bank (NMB)</b></h5>
+           <h5 class="hd"> Account Name :<b><br> Osim Foundation</b></H5>
+            <h5 class="hd"> Account Number :<b><br> 42510024014</b></h5>
+            <h5 class="hd"> Swift Code :<b><br> NMIBTZTZ</b></h5>
+            <h5 class="hd"> Postal Adress :<b><br> 8500 Namanga Arusha-Tanzania</b></H5>
+       </div>
+    </div>
+      
+        <h2 class="container fw-bolder display-6 text-center">Or Pay with</h2>
+        <div class="container justify-content-center align-items-center text-center">
+            <a class="btn dona fw-bolder" href="donation.html" role="button"><i class="bi bi-paypal"></i>PayPal</a>
+            <a class="btn dona fw-bolder" href="retrivalnews.html" role="button">
+                <img src="images/logo_14062969.png" alt="Mastercard" class="credit-card-icon">
+                <img src="images/logo_14062982.png" alt="Visa" class="credit-card-icon">
+              </a>
+              
+      </div>
+    <div class="downUs">
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Links Section -->
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="down">
+                        <h2 class="display-5">Our Home</h2>
+                        <img src="images/longidomap (2).png" alt="map" usemap="#usefulLinksMap" class="mapL">
+                    </div>
+                </div>
+        
+                <!-- Contacts Section -->
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="down">
+                        <h2 class="display-5">Contact</h2>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-phone"></i> Phone:+255769933368</li>
+                            <li><i class="fas fa-phone"></i> Phone:+255766876286</li>
+                            <li><i class="fas fa-envelope"></i> Email: info@OsimFoundation.org</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Follow Us Section -->
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="down">
+                        <h2 class="display-5">Follow Us</h2>
+                        
+                        <div class="social-icons">
+                            <a class="aboutUs" href="#"><i class="bi bi-facebook"></i> OsimFoundation</a>
+                            <a class="aboutUs" href="#"><i class="bi bi-twitter-x"></i> OsimFoundation</a>
+                            <a class="aboutUs" href="#"><i class="bi bi-instagram"></i> OsimFoundation</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+         <div class="me">
+          <footer class="text-center">
+                <div class="container">
+                    <p>Designed by <strong>AskaTechForge</strong> &bull;
+                    <p>&copy; 2024 Osim Foundation . All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+            
+
+    <!-- Include Bootstrap JS (optional, for certain features like modal) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+          document.addEventListener('DOMContentLoaded', function () {
+        // Get all links with the class 'scroll-to-contact'
+        var contactLinks = document.querySelectorAll('.scroll-to-contact');
+
+        // Add click event listeners to each link
+        contactLinks.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                // Get the target section's class from the link's href attribute
+                var targetClass = link.getAttribute('href').substring(1);
+
+                // Use the target class to find the corresponding element (assuming there's only one element with the class)
+                var targetElement = document.querySelector('.' + targetClass);
+
+                if (targetElement) {
+                    // Scroll to the target element with a smooth transition
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

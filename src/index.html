@@ -34,7 +34,8 @@
         @media (max-width: 768px) {
             .card {
                 text-align: center;
-            }                                                                                                                                                                                                                                                                                                           
+            }  
+                                                                                                                                                                                                                                                                                                                    
         }
         .donate{
             background-color:rgb(0, 0, 0, 0.4);
@@ -47,7 +48,10 @@
         .slogan{
             color: whitesmoke;
         }
-       
+
+        .legacyOf{
+                margin-top: 2em;
+            } 
         .decorative-line {
     width: 20%;
     height: 10px; /* Adjust height as needed */
@@ -78,6 +82,9 @@
     color: black;
     font-size: larger;
  }
+ .donat2{
+    margin-top: 2em;
+ }
  
     @media only screen and (max-width:600px)   {
         .toHide{
@@ -86,6 +93,10 @@
         .headtour{
             color: white;
         }
+        .donat2{
+    margin-top: 0;
+ }
+ 
         .tour{
             width: 90%;
             border-radius: 0;
@@ -129,7 +140,9 @@
         .hideOnSmall{
             display: none;
         }
-       
+        .legacyOf{
+                margin-top: 0;
+            } 
 
     }
   .paa{
@@ -219,27 +232,41 @@
                                 </ul>
                             </li>
                         </ul>
+                        <ul class="navbar-nav justify-content-center align-items-center fs-6 flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active mx-2" aria-current="page" href="index.html" style="color: white;"><i class="bi bi-instagram"></i></a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="history.html"><i class="bi bi-whatsapp"></i></a>
+                            </li>
+                            <!-- Modify your "Contact" link -->
+                           <li class="nav-item mx-2">
+                           <a class="nav-link scroll-to-contact" href=".downUs"><i class="bi bi-twitter-x"></i></a>
+                           </li> 
+                         
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="history.html"><i class="bi bi-facebook"></i></a>
+                        </li>
+
+                        </ul>
                        
-        
                         <!-- Add an element for displaying the user's email with Bootstrap icon (this will initially be hidden) -->
-                        <p id="userEmail" style="display: none; color: white; font-size: 18px;">
-                            <i class="bi bi-person-circle"></i> <span id="userEmailText"></span>
-                        </p>
+                      
                     </div>
                 </div>
             </div>
         </nav>
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col col-md-8">
+        <div class="row row-cols-1 row-cols-md-2 g-4 legacyOf">
+            <div class="col col-md-9">
         <div class="container  p-5 text-center">
-            <h1 class="display-4 slogan fw-semibold ">Legacy of Excellence Better Health - Better Society</h1>
+            <h1 class="display-4 slogan fw-semibold ">"Legacy of Excellence Better Health - Better Society"</h1>
         
           </div>
           
             </div>
-            <div class="col col-md-4">
+            <div class="col col-md-3">
                 <div class="container  p-5 text-center">
-                <a class="btn btn-primary btn-lg dona" href="" role="button">DONATE</a>
+                <a class="btn btn-primary btn-lg dona donat2" href="donation.html" role="button">DONATE</a>
                 </div>
             </div>
     </div>
@@ -306,7 +333,7 @@
                 
                             </p>
                           </div>
-                        <a class="btn  dona" href="" role="button">DONATE</a>
+                        <a class="btn  dona" href="donation.html" role="button">DONATE</a>
                     </div>
                 </div>
                 
@@ -332,7 +359,7 @@
             
                         </p>
                       </div>
-                       <a class="btn  dona" href="" role="button">DONATE</a>
+                       <a class="btn  dona" href="donation.html" role="button">DONATE</a>
                    </div>
                </div>
                
@@ -358,7 +385,7 @@
                         </p>
                       </div>
                         
-                       <a class="btn  dona" href="" role="button">DONATE</a>
+                       <a class="btn  dona" href="donation.html" role="button">DONATE</a>
                    </div>
                </div>
                
@@ -607,7 +634,7 @@ if (userEmail) {
 // Add a click event listener to the button
 donateButton.addEventListener('click', function() {
     // Redirect to the desired page (ourTeam.html in this case)
-    window.location.href = 'payment.html';
+    window.location.href = 'donation.html';
 });
 
         </script>
