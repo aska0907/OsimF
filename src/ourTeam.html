@@ -7,6 +7,7 @@
     <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bootstrap-icons-1.11.1/bootstrap-icons.css">
     <!-- Include Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
@@ -44,54 +45,65 @@
 </head>
 <body>
     
-        <nav  class="navbar navbar-expand-lg navbar-dark bg-transparent ">
-            <div class="container-fluid navs">
-                <!--logo-->
-                <h3 class="osimname fw-bolder"> OSIM FOUNDATION</h3>
-        
-                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-        
-                <div class="sidebar offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">OSIM FOUNDATION</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <!--sidebar-->
-                    <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-1">
-                        <ul class="navbar-nav justify-content-center align-items-center fs-6 flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link active mx-2" aria-current="page" href="index.html" style="color: white;">Home</a>
-                            </li>
-                            <li class="nav-item mx-2">
-                                <a class="nav-link" href="history.html">Our History</a>
-                            </li>
-                            <!-- Modify your "Contact" link -->
-                           <li class="nav-item mx-2">
-                           <a class="nav-link scroll-to-contact" href=".downUs">Contact</a>
-                           </li>
+    <nav  class="navbar navbar-expand-lg navbar-dark bg-transparent ">
+        <div class="container-fluid navs">
+            <!--logo-->
+            <h3 class="osimname fw-bolder"> OSIM FOUNDATION</h3>
+    
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="sidebar offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">OSIM FOUNDATION</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!--sidebar-->
+                <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-1">
+                    <ul class="navbar-nav justify-content-center align-items-center fs-6 flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active mx-2" aria-current="page" href="index.html" style="color: white;">Home</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="history.html">Our History</a>
+                        </li>
+                        <!-- Modify your "Contact" link -->
+                       <li class="nav-item mx-2">
+                       <a class="nav-link scroll-to-contact" href=".downUs">Contact</a>
+                       </li>
 
-                            <li class="nav-item mx-2 dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" id="aboutUsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                    About Us
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="aboutUsDropdown">
-                                    <li><a class="dropdown-item" href="ourTeam.html">Our Team</a></li>
-                                    <li><a class="dropdown-item" href="project.html">Our Work</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                       
-        
-                        <!-- Add an element for displaying the user's email with Bootstrap icon (this will initially be hidden) -->
-                        <p id="userEmail" style="display: none; color: white; font-size: 18px;">
-                            <i class="bi bi-person-circle"></i> <span id="userEmailText"></span>
-                        </p>
+                        <li class="nav-item mx-2 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" id="aboutUsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                About Us
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutUsDropdown">
+                                <li><a class="dropdown-item" href="ourTeam.html">Our Team</a></li>
+                                <li><a class="dropdown-item" href="project.html">Our Work</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                   
+    
+                    <!-- Add an element for displaying the user's email with Bootstrap icon (this will initially be hidden) -->
+                    <div class="row justify-content-center ">
+                        <div class="col-auto">
+                            <a href="https://www.instagram.com/askatechforge" class="nav-link text-decoration-none"><i class="bi bi-instagram"></i></a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="https://wa.me/+255766876286" class="nav-link text-decoration-none"><i class="bi bi-whatsapp"></i></a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="https://twitter.com/AskaIsDon1" class="nav-link text-decoration-none scroll-to-contact"><i class="bi bi-twitter-x"></i></a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="https://facebook.com/OsimFoundation"x class="nav-link text-decoration-none"><i class="bi bi-facebook"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
         
        
    
