@@ -170,8 +170,11 @@
       
         <h2 class="container fw-bolder display-6 text-center">Or Donate with</h2>
         <div class="container justify-content-center align-items-center text-center mwisho">
-            <a class="btn dona fw-bolder" href="payment.html" role="button"><i class="bi bi-paypal"></i>PayPal</a>
-            <a class="btn dona fw-bolder" href="retrivalnews.html" role="button">
+            <a id="payyButton" class="btn fw-bold dona" href="javascript:void(0)" role="button">
+                <i class="bi bi-paypal"></i> PayPal
+            </a>
+            
+            <a  id="payButton" class="btn dona fw-bolder"  href="javascript:void(0)" role="button">
                 <img src="images/logo_14062969.png" alt="Mastercard" class="credit-card-icon">
                 <img src="images/logo_14062982.png" alt="Visa" class="credit-card-icon">
               </a>
@@ -213,6 +216,23 @@
             });
         });
     });
+  
+document.addEventListener("DOMContentLoaded", function() {
+    var paypalButton = document.getElementById("payButton");
+    paypalButton.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default behavior of the link
+        alert("Sorry, this service is not available right now.");
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var paypalButton = document.getElementById("payyButton");
+    paypalButton.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default behavior of the link
+        alert("Sorry, this service is not available right now.");
+    });
+});
+
     </script>
 </body>
 </html>
